@@ -1,0 +1,16 @@
+ACCOUNTS = [
+  "GCJMDI3HPUJGTBXIOFE46FUCGVQXLVIH3M2MKGFRRW45W4WNV6R3Z7DU"
+]
+
+[DOCUMENTATION]
+ORG_NAME="DT Asset Issuer"
+ORG_URL="https://dhruvtilva.github.io/Stellar-Network/"
+ORG_DESCRIPTION="Issuer of the DT custom token on Stellar Testnet"
+ORG_PHYSICAL_ADDRESS="I am Anonymous!"
+ORG_OFFICIAL_EMAIL="card.managment.helpdesk@gmail.com"
+
+[[CURRENCIES]]
+code="DT"
+issuer="GCJMDI3HPUJGTBXIOFE46FUCGVQXLVIH3M2MKGFRRW45W4WNV6R3Z7DU"
+desc="DT is a custom asset for testing purposes"
+is_asset_anchored=false
