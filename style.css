@@ -1,0 +1,167 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Wallet, Payment, History Sections */
+.wallet-section, .payment-section, .history-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Hide sections */
+.hidden {
+    display: none !important;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #4A90E2;
+    outline: none;
+    box-shadow: 0 0 6px rgba(74, 144, 226, 0.4);
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Buttons */
+.btn {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Primary button */
+.btn-primary {
+    background-color: #2E86DE;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(46, 134, 222, 0.4);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #2169b5;
+    box-shadow: 0 6px 15px rgba(33, 105, 181, 0.7);
+}
+
+.btn-secondary {
+    background-color: #AAB2BD;
+    color: #fff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #8c949f;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.1rem;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+    background-color: #1e7e34;
+}
+
+#status-messages {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 320px;
+    z-index: 1000;
+}
+
+.status-message {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.status-success {
+    background-color: #28a745;
+}
+
+.status-error {
+    background-color: #dc3545;
+}
+
+.status-info {
+    background-color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+}

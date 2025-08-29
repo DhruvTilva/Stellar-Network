@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My First xBull Wallet dApp</title>
+    <link rel="stylesheet" href="style.css" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-sdk/8.2.4/stellar-sdk.min.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DT Dapp  App</h1>
+            <p>Connect your xBull wallet and make payments on Stellar Network</p>
+        </header>
+
+        <div class="wallet-section">
+            <div id="wallet-status" class="status-disconnected">
+                <h3>Wallet Status: Disconnected</h3>
+                <button id="connect-btn" class="btn btn-primary">Connect xBull Wallet</button>
+            </div>
+            <div id="wallet-info" class="wallet-info hidden">
+                <h3>✅ Wallet Connected</h3>
+                <p><strong>Address:</strong> <span id="wallet-address"></span></p>
+                <p><strong>XLM Balance:</strong> <span id="xlm-balance">Loading...</span></p>
+                <button id="disconnect-btn" class="btn btn-secondary">Disconnect</button>
+            </div>
+        </div>
+
+        <div class="payment-section hidden" id="payment-section">
+            <h3>💸 Send Payment</h3>
+            <form id="payment-form">
+                <label for="destination">Destination Address:</label>
+                <input type="text" id="destination" placeholder="destination wallet address" required />
+                <label for="amount">Amount (XLM):</label>
+                <input type="number" id="amount" step="0.0000001" min="0.0000001" placeholder="10.5" required />
+                <label for="memo">Memo (Optional):</label>
+                <input type="text" id="memo" placeholder="Payment for services" />
+                <button type="submit" class="btn btn-success">Send Payment</button>
+            </form>
+        </div>
+
+        <div class="history-section hidden" id="history-section">
+            <h3>📜 Recent Transactions</h3>
+            <div id="transaction-list">
+                <p>Loading transactions...</p>
+            </div>
+        </div>
+
+        <div id="status-messages"></div>
+    </div>
+
+    <script src="stellar.js"></script>
+    <script src="wallet.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            initializeStellarManager();
+            initializeWalletManager();
+        });
+    </script>
+</body>
+</html>

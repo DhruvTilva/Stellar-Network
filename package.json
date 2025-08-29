@@ -1,0 +1,39 @@
+{
+    "name": "xbull-wallet-dapp",
+    "version": "1.0.0",
+    "description": "A simple dApp integrating with xBull Wallet for Stellar Network payments",
+    "main": "index.html",
+    "scripts": {
+      "start": "live-server --port=3000 --open=/index.html",
+      "serve": "python -m http.server 3000",
+      "build": "echo 'No build process needed for this static site'",
+      "test": "echo 'No tests configured yet'"
+    },
+    "dependencies": {
+      "@creit.tech/stellar-wallets-kit": "^0.0.7",
+      "@creit.tech/xbull-wallet-connect": "^0.4.0",
+      "stellar-sdk": "^11.2.2"
+    },
+    "devDependencies": {
+      "live-server": "^1.2.2"
+    },
+    "keywords": [
+      "stellar",
+      "blockchain",
+      "wallet",
+      "xbull",
+      "cryptocurrency",
+      "payments",
+      "dapp"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/yourusername/xbull-wallet-dapp.git"
+    },
+    "engines": {
+      "node": ">=14.0.0",
+      "npm": ">=6.0.0"
+    }
+  }
